@@ -1,0 +1,38 @@
+import React, { useState } from "react";
+import {  StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+
+
+export default function FlatButton({ text, onPress }) {
+
+    return(
+        <TouchableOpacity onPress={onPress}>
+            <View style={styles.button}>
+                <Text style={styles.buttonText}>
+                    { text }
+                </Text>
+            </View>
+        </TouchableOpacity>
+    )
+    
+}
+
+const styles = StyleSheet.create({
+    button:{
+        borderRadius: 8,
+        paddingVertical: 10,
+        paddingHorizontal: 15,
+        backgroundColor: '#2C7873',
+        marginLeft: 10,
+        width: 70,
+    },
+    buttonText:{
+        color: 'white',
+        textTransform: 'uppercase',
+        fontSize: 16,
+        textAlign: "center",
+       
+        fontFamily: "Bangers-Regular"
+    }
+})
+
+    
